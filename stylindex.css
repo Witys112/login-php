@@ -1,18 +1,15 @@
 :root{
     --body: #acacac;
-    --login: #96969693;
+    --choice: #96969693;
     --przycisk1:#ffcb0d;
-    --przycisk0: #000;
-}
-*{
-    font-size: xx-large;
+    --przycisk2: #d1a01b;
 }
 
 body{
-    background-color: var(--login);
+    background-color: var(--body);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
     margin: auto;
     height: 100vh;
     width: 100vw;
@@ -20,40 +17,36 @@ body{
     justify-content: center;
     align-items: center;
     z-index: 1;
+    
 }
 
-.login{
-    background-color: var(--login);
-    width: auto;
-    height: auto;
+.choice{
+    background-color: var(--choice);
+    border: solid black 1px;
     margin: auto;
     padding: 2%;
+    width: auto;
+    height: auto;
     text-align: center;
-    border: solid black 1px;
+    font-size: 300%;
     z-index: 2;
-
-}
-
-
-#pole{
-    color:black;
-    background-color: white;
-    margin: auto;
-    margin-top: 20px;
-    width: 90%;
-    border: none;
 
 }
 
 #przycisk{
     color: white;
     background-color: var(--przycisk1);
-    margin: auto;
     margin-top: 20px;
     padding: 10px;
     padding-left: 50px;
     padding-right: 50px;
+    font-size: xx-large;
     border: none;
+}
+
+
+#przycisk:hover{
+    background-color: var(--przycisk2);
 }
 
 

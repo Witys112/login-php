@@ -1,8 +1,12 @@
 :root{
     --body: #acacac;
-    --choice: #96969693;
+    --register: #96969693;
     --przycisk1:#ffcb0d;
-    --przycisk0: #000;
+    --przycisk2: #d1a01b;
+    --blad: #69696993;
+}
+*{
+    font-size: xx-large;
 }
 
 body{
@@ -20,35 +24,59 @@ body{
     
 }
 
-.choice{
-    background-color: var(--choice);
-    border: solid black 1px;
-    margin: auto;
-    padding: 2%;
+.register{
+    background-color: var(--register);
     width: auto;
     height: auto;
+    margin: auto;
+    padding: 2%;
     text-align: center;
-    font-size: 300%;
+    border: solid black 1px;
     z-index: 2;
 
 }
 
-#przycisk{
-    color: white;
-    background-color: #ffcb0d;
+#pole{
+    color:black;
+    background-color: white;
+    margin: 10px;
     margin-top: 20px;
+    width: auto;
+    border: none;
+
+}
+
+#przycisk1{
+    color: white;
+    background-color: var(--przycisk1);
+    margin: 20px;
     padding: 10px;
     padding-left: 50px;
     padding-right: 50px;
-    font-size: xx-large;
     border: none;
 }
-#przycisk:hover{
-    background-color: green;
+
+#przycisk2{
+    color: white;
+    background-color: var(--przycisk1);
+    margin: 20px;
+    margin-bottom: auto;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: none;
 }
 
 
+#przycisk1:hover,#przycisk2:hover{
+    background-color: var(--przycisk2);
+}
 
+#blad{ /* trzeba zrobić potem */
+    color:red;
+    background-color: var(--blad);
+    padding: 5px;
+}
 
 
 

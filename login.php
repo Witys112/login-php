@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logowanie</title>
-    <link rel="stylesheet" type="text/css" href="loginphp.css">
+    <link rel="stylesheet" type="text/css" href="styllogin.css">
 
     <!-- FONTY -->
     <link rel="stylesheet" type="text/css"  href="font.css">
@@ -20,20 +20,21 @@
     <div class="login">
 
     <form action="login.php" method="post">
-        <b>login/e-mail:</b>
+        <b>login/e-mail :</b><br>
         <input type="text" name="login" id="pole"><br>
-        <b>hasło:</b>
+        <b>hasło :</b><br>
         <input type="password" name="password" id="pole"><br>
 
-        <input type="submit" value="zaloguj" id="przycisk">        
+        <input type="submit" value="zaloguj" id="przycisk1">        
 
         
     </form> 
         <?php
             require_once("loginkod.php");
         ?>
-    <form action="register.php" method="post">
-        <input type="submit" value="do rejestracji" id="przycisk">
+        <hr>
+    <form action="index.php">
+        <input type="submit" value="do menu" id="przycisk2">
     </form>
 
 

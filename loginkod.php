@@ -11,22 +11,22 @@
             $wynik = mysqli_query($polaczenie, $zapytanielogin);
             $odpowiedz = mysqli_fetch_row($wynik);
 
-            if(!empty($login)){
+            if(!empty($login) and !empty($_POST['password'])){
                 if($login == $odpowiedz[0] or $login == $odpowiedz[2]){
                     if(password_verify($_POST['password'], $odpowiedz[1])){
                         $_SESSION['login'] = $login;
                         header('Location: http://localhost/_cv/login-php/website.php');
                     }
                     else{
-                        echo "złe hasło";
+                        echo " <b id='blad'>złe hasło</b> ";
                     }
                 }
                 else{
-                    echo "zły login bądź email";
+                    echo "<b id='blad'>zły login bądź email</b>";
                 }
             }
-            else{
-                echo "pola puste";
+            else{ #<b> puste pole </b>
+                echo "<b id='blad'> puste pole </b>";
             }
             mysqli_close($polaczenie);
         ?>

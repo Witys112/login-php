@@ -1,4 +1,5 @@
 <?php
+        error_reporting(0);
         require_once("base.php");
 
         $email = $_POST['email'];
@@ -15,30 +16,30 @@
                 if($szukanieloginu[0] != $login){ #loginuzyty
                     if(filter_var($email, FILTER_VALIDATE_EMAIL)){ #email
                         if(strlen($_POST['password']) >=6){ #hasło
+                            $_SESSION['login']=$_POST['login'];
                             mysqli_query($polaczenie, $register);
                             header('Location: http://localhost/_cv/login-php/website.php');
                             }   
                         else{
-                            echo "za krótkie hasło";
+                            echo "<b id='blad'> za krótkie hasło </b>";
                         } #hasło
                     }
                     else{
-                        echo "zły email";
+                        echo "<b id='blad'> zły e-mail </b>";
                         }#email
                 }
                 else{
-                    echo "login uzyty";
+                    echo "<b id='blad'> login użyty </b>";
                     }#loginuzyty
                 }
             else{
-                echo "za długi login";
+                echo "<b id='blad'> za długi login </b>";
                 }
             
-        }
+        }  
         else{
-            echo "puste pole";
+            echo "<b id='blad'> puste pole </b>";
             }
         
         mysqli_close($polaczenie);
-        exit();
     ?>

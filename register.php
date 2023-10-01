@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rejestracja</title>
+    <link rel="stylesheet" type="text/css"  href="stylregister.css">
 
     <!-- FONTY -->
     <link rel="stylesheet" type="text/css"  href="font.css">
@@ -16,17 +17,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form action="register.php" method="post">
-        login:
-        <input type="text" name="login"><br>
-        e-mail:
-        <input type="text" name="email"><br>
-        hasło:
-        <input type="password" name="password"><br>
-        <input type="submit" value="zarejestruj">
+    <div class="register">
+        <form action="register.php" method="post">
+            <b>login:</b><br>
+            <input type="text" name="login" id="pole"><br>
+            <b>e-mail:</b><br>
+            <input type="text" name="email" id="pole"><br>
+            <b>hasło:</b><br>
+            <input type="password" name="password" id="pole"><br>
+            <input type="submit" value="zarejestruj" id="przycisk1">
+        </form>
+
+        <?php
+            require_once("registerkod.php");
+        ?>
+        <hr>
+    <form action="index.php">
+        <input type="submit" value="do menu" id="przycisk2">
     </form>
-    <?php
-        require_once("registerkod.php");
-    ?>
+
+    </div>
+
+
+    <div class="kolopomarancz"></div>
+    <div class="kolofiolet"></div>
+    <div class="koloczarny"></div>
+
 </body>
 </html>
